@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BIENVENIDO</h1>
+        </div>
+        
+        <form id="formulario" class="form">
+            <div class="campo">
+                <span class="icono">👤</span>
+                <input type="text" id="nombre" placeholder="Nombre" required>
+            </div>
+            
+            <div class="campo">
+                <span class="icono">🔒</span>
+                <input type="password" id="contraseña" placeholder="Contraseña" required>
+            </div>
+            
+            <div class="campo">
+                <span class="icono">📧</span>
+                <input type="email" id="correo" placeholder="Correo" required>
+            </div>
+            
+            <div class="campo">
+                <span class="icono">📞</span>
+                <input type="tel" id="telefono" placeholder="Teléfono" required>
+            </div>
+            
+            <div class="terminos">
+                <a href="#">Términos y Condiciones</a>
+            </div>
+            
+            <button type="submit" class="boton">Enviar</button>
+        </form>
+        
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
